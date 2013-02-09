@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="add-form">
+    <div class="main-title">
+        <h3>Add a post</h3>
+    </div>
+
+	<form action="/add/" method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <label for="title">Title:</label>
+        <div class="fieldWrapper">
+            {{ form.title.errors }}
+            {{ form.title }}
+        </div>
+        <label for="text">Text:</label>
+        <div class="fieldWrapper">
+            {{ form.text.errors }}
+            {{ form.text }}
+        </div>
+        <p><button type="submit" class="btn">
+            Add!
+           </button>
+        </p>
+    </form>
+</div>
+{% endblock %}
