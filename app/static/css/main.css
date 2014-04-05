@@ -1,3 +1,20 @@
-body {
-    background-color:yellow;
+.row {
+    width: 1440px;
+}
+
+[role="main"] {
+	width: 80%;
+	padding: 0 15px;
+}
+
+.eight, .row .eight {
+	width: 66.667%;
+}
+
+[class*="column"] + [class*="column"]:last-child {
+	float: right;
+}
+
+.four, .row .four {
+	width: 33.333%;
 }
